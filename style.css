@@ -1,0 +1,326 @@
+:root {
+    --bg: #07070a;
+    --surface: rgba(255, 255, 255, 0.06);
+    --surface-strong: rgba(255, 255, 255, 0.1);
+    --text: #ffffff;
+    --muted: #a1a1aa;
+
+    --primary: #8b5cf6;
+    --secondary: #22d3ee;
+
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+
+    --radius: 18px;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", "Noto Sans KR", sans-serif;
+    background: radial-gradient(circle at top, #0b0b12, var(--bg));
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: none;
+
+    font-family: "Inter", "Noto Sans KR", sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: none;
+
+    /* 🇻🇳 Background Việt Nam */
+    background:
+        linear-gradient(rgba(7, 7, 10, 0.78),
+            rgba(7, 7, 10, 0.88)),
+        url("https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+/* CUSTOM CURSOR */
+.cursor {
+    position: fixed;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, background 0.2s ease, width 0.2s, height 0.2s;
+    mix-blend-mode: difference;
+    z-index: 9999;
+}
+
+.cursor.hovering {
+    width: 42px;
+    height: 42px;
+    background: rgba(34, 211, 238, 0.15);
+}
+
+/* LINKS */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* GLASS */
+.glass {
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+}
+
+.glass:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(7, 7, 10, 0.6);
+    backdrop-filter: blur(14px);
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 12px 6%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+.logo span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+    color: var(--muted);
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: var(--gradient);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 10% 0;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.18), transparent 70%);
+    top: -200px;
+    left: -200px;
+    z-index: -1;
+    filter: blur(40px);
+}
+
+.subtitle {
+    color: var(--secondary);
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.title span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    margin-top: 18px;
+    color: var(--muted);
+    max-width: 520px;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 12px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: var(--gradient);
+    color: white;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text);
+}
+
+.secondary-btn:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+/* HERO SHAPE */
+.blob-shape {
+    width: 380px;
+    height: 380px;
+    background: var(--gradient);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s infinite ease-in-out;
+    filter: blur(0px);
+    opacity: 0.85;
+    box-shadow: 0 0 80px rgba(139, 92, 246, 0.4);
+}
+
+@keyframes morph {
+
+    0%,
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+/* SKILLS */
+.skill-card {
+    padding: 24px;
+    text-align: center;
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .blob-shape {
+        width: 240px;
+        height: 240px;
+    }
+}

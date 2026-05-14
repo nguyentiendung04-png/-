@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="안녕하세요! 저를 소개하는 포트폴리오 웹사이트입니다.">
+    <title>About Me | 포트폴리오</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="cursor" class="cursor"></div>
+    <nav class="navbar">
+        <div class="logo">My<span>Profile</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="subtitle">Hello, NGUYEN TIEN DUNG</h2>
+            <h1 class="title">저는 <span class="highlight">창의적인</span><br>개발자입니다</h1>
+            <p class="description">
+                아이디어를 코드로 실현하고, 사용자에게 더 나은 경험을 제공하기 위해 끊임없이 고민합니다.
+            </p>
+            <div class="cta-buttons">
+                <a href="#about" class="btn primary-btn">자세히 보기</a>
+                <a href="#contact" class="btn secondary-btn">연락하기</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="hero_image.png" alt="슈퍼맨 번개" class="hero-img">
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-content">
+                <div class="about-text glass-panel">
+                    <h3>열정적이고 끊임없이 배우는 사람</h3>
+                    <p>안녕하세요! 새로운 기술을 배우고 적용하는 것을 즐기는 개발자입니다. 문제를 해결하는 과정에서 희열을 느끼며, 항상 더 나은 코드를 작성하기 위해 노력합니다.</p>
+                    <p>팀워크를 중요하게 생각하며, 소통과 협업을 통해 더 큰 시너지를 만들어낼 수 있다고 믿습니다.</p>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-box glass-panel">
+                        <h4 class="stat-number">1+</h4>
+                        <p class="stat-text">Years of Experience</p>
+                    </div>
+                    <div class="stat-box glass-panel">
+                        <h4 class="stat-number">10+</h4>
+                        <p class="stat-text">Projects Completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card glass-panel">
+                    <div class="skill-icon">💻</div>
+                    <h3>Frontend</h3>
+                    <p>HTML5, CSS3, JavaScript</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend</h3>
+                    <p>Node.js, Python</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Design</h3>
+                    <p>Figma, UI/UX</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="contact-content glass-panel">
+                <p>새로운 프로젝트나 협업에 대해 이야기 나누고 싶으신가요? 언제든 연락주세요!</p>
+                <div class="contact-info">
+                    <p>📧 ntd.gaming2004@gmail.com</p>
+                    <p>📱 +82 10-5766-2206</p>
+                    <p>📍 Seoul, South Korea</p>
+                </div>
+                <button class="btn primary-btn send-message-btn">메시지 보내기</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 My Profile. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
